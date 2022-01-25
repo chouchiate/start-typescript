@@ -114,16 +114,16 @@ module.exports = {
     // 避免出現 Unable to resolve path to module
     'import/resolver': {
       node: {
-        paths: ['src'], // 加上這行才能用 absolute import
+        paths: ['src'], // absolute import
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
     },
   },
   rules: {
-    // 避免出現 JSX not allowed in files with extension '.tsx'
+    // avoid JSX not allowed in files with extension '.tsx'
     'react/jsx-filename-extension': [1, { extensions: ['.tsx', '.ts'] }],
 
-    // 避免出現 'React' was used before it was defined
+    // avoid 'React' was used before it was defined
     'import/extensions': [
       'error',
       'ignorePackages',
@@ -135,16 +135,16 @@ module.exports = {
       },
     ],
 
-    // 避免出現 'React' was used before it was defined 的錯誤
+    // avoid 'React' was used before it was defined error
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error'],
 
-    // 必須建議使用 default export
+    // must use default export
     'import/prefer-default-export': 'off',
 
-    // 檢查 Hook 的規則
+    // check Hook rule
     'react-hooks/rules-of-hooks': 'error',
-    // 檢查 effect 的相依性
+    // check effect dependency
     'react-hooks/exhaustive-deps': 'warn',
 
     'react/no-children-prop': 'warn',
